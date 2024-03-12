@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANBANK</title>
+    <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="titulo">
+        <h1>VANBANK</h1>
+        <img src="/img/logo.ico" alt="">
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="/registrar" method="POST">
+                <h1>CREAR UN USUARIO</h1>
+                <span>recuerda, no compartir datos personales</span>
+                <input type="text" name="txtUsuario" placeholder="USUARIO" required>
+                <input type="password" name="txtContrasena" placeholder="CONTRASEÑA" onblur="f_blur()" id="pass" required>
+                <button>SIGUIENTE</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="/principal" method="POST">
+                <h1>INICIAR SESION</h1>
+                <span>recuerda, no compartir datos personales</span>
+                <input type="text" name="txtUsuario" placeholder="USUARIO" required>
+                <input type="password" name="txtContrasena" placeholder="CONTRASEÑA" required>
+                <button>INICIAR SESION</button>
+            </form>
+            
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡BIENVENIDO NUEVAMENTE!</h1>
+                    <p>Ingresa tus datos personales, y recuerda VANBANK protege tus finanzas</p>
+                    <button class="hidden" id="login">INICIAR SESION</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¡HOLA, AMIGO!</h1>
+                    <p>Registrate con tus datos personales e inicia el mundo de las finanzas</p>
+                    <button class="hidden" id="register">REGISTRATE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/script.js"></script>
+</html>

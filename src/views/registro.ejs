@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/styleR.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>VANBANK</h1>
+        <img src="/img/logo.ico" alt="">
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form action="/registro/<%= id[0] %>" method="POST">
+                <h1>REGISTRO DE CUENTA</h1>
+                <span>Ingresa los siguiente datos:</span>
+                <input type="text" name="txtDpi" placeholder="DPI" required>
+                <input type="text" name="txtNombre" placeholder="PRIMER NOMBRE" required>
+                <input type="text" name="txtApellido" placeholder="PRIMER APELLIDO" required>
+                <input type="date" name="txtF_Nacimiento" id="" required>
+                <input type="text" name="txtResidencia" placeholder="DIRECCION DE RESIDENCIA" required>
+                <input type="tel" name="txtTelefono" placeholder="TELEFONO" required>
+                <button>REGISTRARME</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>¡GRACIAS POR CONFIAR EN NOSOTROS!</h1>
+                    <p>Resgistrate con tus datos personales y recuerda no debes compartir ningun dato personal, gracias por elegir el mejor banco de Guatemala, tus finanzas con mayor seguridad y crecimiento</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

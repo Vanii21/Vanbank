@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleE.css">
+</head>
+<body>
+    <div class="container-table">
+        <div class="table-debitos">
+            <h1>DEBITOS</h1>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FECHA MOVIMIENTO</th>
+                            <th>NUMERO CUENTA</th>
+                            <th>MONTO DEBITADO</th>
+                            <th>DESCRIPCION</th>
+                            <th>TIPO CUENTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (rowsDebito) { %>
+                            <% rowsDebito.forEach(rCuentas => { %>
+                                <tr>
+                                    <td><%= new Date(rCuentas[0]).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) %></td>
+                                    <td>00<%= rCuentas[1] %></td>
+                                    <td style="color: red;">-Q<%= rCuentas[2] %></td>
+                                    <td><%= rCuentas[3] %></td>
+                                    <td><%= rCuentas[4] %></td>
+                                </tr>
+                            <% }); %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="table-creditos">
+            <div class="">
+                <h1>CREDITOS</h1>
+            </div>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FECHA MOVIMIENTO</th>
+                            <th>NUMERO CUENTA</th>
+                            <th>MONTO ACREDITADO</th>
+                            <th>DESCRIPCION</th>
+                            <th>TIPO CUENTA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (rowsCredito) { %>
+                            <% rowsCredito.forEach(rCuentas => { %>
+                                <tr>
+                                    <td><%= new Date(rCuentas[0]).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }) %></td>
+                                    <td>00<%= rCuentas[1] %></td>
+                                    <td style="color: green;">+Q<%= rCuentas[2] %></td>
+                                    <td><%= rCuentas[3] %></td>
+                                    <td><%= rCuentas[4] %></td>
+                                </tr>
+                            <% }); %>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

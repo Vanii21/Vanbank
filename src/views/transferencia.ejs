@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleT.css">
+</head>
+<body>
+    <% if (rowsOrigen.length === 1) { %>
+        <div class="container">
+            <h2>TRANSFERENCIAS VANBANK</h2>
+            <form action="/transferir/<%= rowsOrigen[0][1] %>/<%= rowsOrigen[0][0] %>" method="post">
+                <div class="form-group">
+                    <label for="monto">Monto:</label>
+                    <input type="number" placeholder="Monto" name="monto" required>
+                </div>
+                <div class="form-group">
+                    <label for="cuenta_destino">Cuenta Destino:</label>
+                    <select id="cuenta_destino" name="cuenta_destino" required>
+                        <option value="" selected disabled>Seleccione una cuenta destino</option>
+                        <% if (rowsDestino) { %>
+                            <% rowsDestino.forEach(rCuentas => { %>
+                                <option value="<%= rCuentas[1] %>">Nombre: <%= rCuentas[0] %> / N° Cuenta: <%= rCuentas[1] %> / Tipo Cuenta: <%= rCuentas[2] %></option>
+                            <% }); %>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cuenta_origen">Cuenta Origen:</label>
+                    <select id="cuenta_origen" name="cuenta_origen" required>
+                        <option value="" selected disabled>Seleccione una cuenta origen</option>
+                        <% if (rowsOrigen) { %>
+                            <% rowsOrigen.forEach(rCuentas => { %>
+                                <option value="<%= rCuentas[3] %>">Nombre: <%= rCuentas[2] %> / N° Cuenta: <%= rCuentas[3] %> / Tipo Cuenta: <%= rCuentas[4] %></option>
+                            <% }); %>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="TRANSFERIR">
+                </div>
+            </form>
+        </div>
+    <% } else { %>
+        <div class="info">
+            <img src="/img/info.png" alt="">
+            <h1>NO PUEDES REALIZAR TRANSFERENCIAS</h1>
+        </div>
+    <% } %>
+</body>
+</html>

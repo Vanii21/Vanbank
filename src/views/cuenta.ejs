@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleC.css">
+</head>
+<body>
+
+    <% if (rowsCuentas.length === 0) { %>
+
+        <div class="info">
+            <img src="/img/info.png" alt="">
+            <h1>NO EXISTEN CUENTAS ASOCIADAS</h1>
+        </div>
+    
+    <% } else { %>
+    
+        <% rowsCuentas.forEach(rCuentas => { %>
+            <div class="card">
+                <div class="title">Cuenta: <%= rCuentas[3] %></div>
+                <div class="features">
+                <ul>
+                    <li><span>Numero de cuenta: </span> 00<%= rCuentas[2] %> </li>
+                    <li><span>Nombre del titular: </span> <%= rCuentas[0] %></li>
+                    <li><span>Saldo disponible: </span>Q <%= rCuentas[1] %></li>
+                </ul>
+                </div><!--/features-->
+                <a href="/estado" class="btn" target="">MOVIMIENTOS</a>
+            </div><!--/card-->
+        <% }); %>
+    
+    <% } %>
+
+</body>
+</html>

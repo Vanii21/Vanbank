@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleAs.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Asignar Cuenta de Banco</h2>
+        <form action="/asignarCuenta" method="POST">
+            <div class="form-group">
+                <label for="numero-cuenta">Numero de Cuenta:</label>
+                <input type="text" id="numero-cuenta" name="txtNoCuenta" required>
+            </div>
+            <div class="form-group">
+                <label for="saldo">Saldo:</label>
+                <input type="text" id="saldo" name="txtSaldo" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo-cuenta">Tipo de Cuenta:</label>
+                <select id="tipo-cuenta" name="txtTipoCuenta" required>
+                    <option value="" selected disabled>Seleccione un tipo de cuenta</option>
+                    <option value="2">Ahorro</option>
+                    <option value="1">Monetaria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <select id="cliente" name="txtDpi" required>
+                    <option value="" selected disabled>Seleccione el cliente</option>
+                    <% if (rowsClientes) { %>
+                        <% rowsClientes.forEach(rClientes => { %>
+                            <option value="<%= rClientes[0] %>"><%= rClientes[1] %></option>
+                        <% }); %>
+                    <% } %>
+                </select>
+            </div>
+            <input type="submit" value="Asignar Cuenta">
+        </form>
+    </div>
+</body>
+</html>

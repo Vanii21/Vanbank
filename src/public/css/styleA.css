@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.frame{
+    display: flex;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.frame iframe{
+    height: 88vh; 
+    width: 98.89vmax;
+    border-radius: 5px;
+    border: none;
+}
+
+.navbar{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246,232,240,1) 15%, rgba(238,212,227,1) 30%, rgba(229,188,212,1) 45%, rgba(220,163,196,1) 60%, rgba(211,139,181,1) 75%, rgba(202,116,167,1) 90%, rgba(195,98,156,1) 97%, rgba(179,1,107,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+}
+
+.navbar-nav{
+    display: flex;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.nav-item a{
+    text-decoration: none;
+    margin-left: 10px; 
+    border: none;
+    color: black;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-logo img{
+    width: 13%;
+}
+
+.nav-logo h1{
+    padding-left: 25px;
+}
+
+
+
+/* Estilos básicos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 15%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button img{
+    width: 15%;
+    cursor: pointer;
+}
+
+.button p{
+    color: black;
+}
+
+.buttonh {
+    position: absolute;
+    list-style: none;
+    padding: 5px;
+    display: none;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el ratón sobre el botón */
+.button:hover .buttonh {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}

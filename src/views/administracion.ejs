@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANBANK</title>
+    <link rel="stylesheet" href="/css/styleA.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            <img src="/img/logo.ico" alt="logo">
+            <h1> ADMINISTRACION VANBANK</h1>
+        </div>
+
+        <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/clientes" target="myFrame">CLIENTES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/asignar" target="myFrame">ASIGNAR CUENTAS</a>
+                </li>
+            </ul>  
+        </div>
+
+        <ul class="dropdown">
+            <li class="button">
+                <img src="/img/log.png" alt="logo">
+                <ul class="buttonh">
+                    <p href="#">
+                        <img src="img/log.png" alt="60" width="60"/><br>
+                        Usuario: <%= datoA[0] %>
+                    </p>
+                    <li><a class="dropdown-item" href="/">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+    </nav>
+
+    <div class="mt-4 frame">
+        <iframe name="myFrame"></iframe>
+    </div>
+
+</body>
+
+</html>

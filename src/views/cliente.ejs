@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleE.css">
+</head>
+<body>
+    <div class="table-debitos">
+        <h1>CLIENTES ACTIVOS</h1>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>DPI</th>
+                        <th>NOMBRE</th>
+                        <th>FECHA NACIMIENTO</th>
+                        <th>RECIDENCIA</th>
+                        <th>CONTACTO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (rowsClientes) { %>
+                        <% rowsClientes.forEach(rClientes => { %>
+                            <tr>
+                                <td><%= rClientes[0] %> </td>
+                                <td><%= rClientes[1] %></td>
+                                <td><%= new Date(rClientes[2]).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric'}) %></td>
+                                <td><%= rClientes[3] %></td>
+                                <td><%= rClientes[4] %></td>
+                            </tr>
+                        <% }); %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

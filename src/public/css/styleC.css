@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0 0 5px #9E005D;
+  border-radius: 5px;
+  margin: 15px 15px 15px 15px;
+  width: calc(26.5555% - 40px);
+  padding: 20px;
+  text-align: center;
+  color: black;
+  float: left;
+}
+
+.icon {
+    margin: 50px 0;
+    svg {
+      width: 100px;
+      height: 100px;
+      path {
+        fill: #F6B352;
+      }
+    }
+}
+
+.features ul{
+    padding: 0;
+    margin: 20px 0 50px 0;
+    list-style-type: none;
+}
+
+.features li {
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.features li span {
+    border-bottom: 2px dotted #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn {
+    display: block;
+    background: #9E005D;
+    color: white;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.9);
+    text-decoration: none;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.info img{
+    width: 15%;
+    padding-bottom: 50px;
+}
