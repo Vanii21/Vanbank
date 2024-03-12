@@ -22,7 +22,6 @@ controller.principal = async (req, res) => {
         if (dato[1] === datoA[0] && dato[2] === datoA[1]) {
             res.render('administracion', {datoA});
         } else{
-            console.log(dato);
             res.render('principal', { dato });
         }
     } else {
