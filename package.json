@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js --exec babel-node",
-    "start": "node index.js"
+    "dev": "nodemon src/index.js --exec babel-node"
 
   },
   "keywords": [],
