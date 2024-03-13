@@ -38,10 +38,14 @@ controller.registrar = async (req, res) => {
     if (existe.length === 1){
         res.redirect('/');
     } else {
-        await pool.execute('BEGIN USUARIOR(:txtUsuario, :txtContrasena); END;', {txtUsuario: txtUsuario, txtContrasena: txtContrasena});
-        const usuario = await pool.execute('BEGIN USUARIOC(:txtUsuario, :usuario); END;', {txtUsuario: txtUsuario, usuario: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
-        const id =  await usuario.outBinds.usuario.getRow();
-        res.render('registro', {id});
+        if (txtContrasena.length <= 8) {
+            await pool.execute('BEGIN USUARIOR(:txtUsuario, :txtContrasena); END;', {txtUsuario: txtUsuario, txtContrasena: txtContrasena});
+            const usuario = await pool.execute('BEGIN USUARIOC(:txtUsuario, :usuario); END;', {txtUsuario: txtUsuario, usuario: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
+            const id =  await usuario.outBinds.usuario.getRow();
+            res.render('registro', {id});
+        } else {
+            res.redirect('/');
+        }
     }
 };
 
