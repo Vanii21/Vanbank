@@ -3,7 +3,7 @@ import oracledb from 'oracledb';
 const dbSettings = {
     user: 'VDB',
     password: '1234',
-    connectString: 'localhost:1521/xe',
+    connectString: '2.tcp.ngrok.io:13266/xe',
     database: 'VaniiDB',
 }
 
