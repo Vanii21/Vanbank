@@ -20,15 +20,15 @@
     
         <% rowsCuentas.forEach(rCuentas => { %>
             <div class="card">
-                <div class="title">Cuenta: <%= rCuentas[3] %></div>
+                <div class="title">Cuenta: <%= rCuentas[4] %></div>
                 <div class="features">
                 <ul>
-                    <li><span>Numero de cuenta: </span> 00<%= rCuentas[2] %> </li>
-                    <li><span>Nombre del titular: </span> <%= rCuentas[0] %></li>
-                    <li><span>Saldo disponible: </span>Q <%= rCuentas[1] %></li>
+                    <li><span>Numero de cuenta: </span> 00<%= rCuentas[3] %> </li>
+                    <li><span>Nombre del titular: </span> <%= rCuentas[1] %></li>
+                    <li><span>Saldo disponible: </span>Q <%= rCuentas[2] %></li>
                 </ul>
                 </div><!--/features-->
-                <a href="/estado" class="btn" target="">MOVIMIENTOS</a>
+                <a href="/estado/<%= rCuentas[0] %>" class="btn" target="">MOVIMIENTOS</a>
             </div><!--/card-->
         <% }); %>
     
