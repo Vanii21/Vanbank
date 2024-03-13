@@ -68,3 +68,27 @@ tbody tr {
 tbody tr:hover {
     background: rgba(243, 103, 199, 0.4);
 }
+
+/* Estilos para teléfonos en vertical */
+@media only screen and (max-width: 576px) {
+    .container-table{
+        flex-direction: column; /* Cambiar a columna para teléfonos */
+    }
+
+    .table-debitos,
+    .table-creditos {
+        width: 100%; /* Ancho completo para teléfonos */
+    }
+
+    table {
+        font-size: 12px; /* Reducir el tamaño de la fuente para teléfonos */
+    }
+
+    th {
+        padding: 10px; /* Reducir el padding de las celdas de encabezado */
+    }
+
+    td {
+        padding: 8px; /* Reducir el padding de las celdas de datos */
+    }
+}

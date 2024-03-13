@@ -70,3 +70,19 @@
     width: 15%;
     padding-bottom: 50px;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px #b5006d;
+    }
+
+    .info img {
+        width: 30%;
+        padding-bottom: 30px;
+    }
+}

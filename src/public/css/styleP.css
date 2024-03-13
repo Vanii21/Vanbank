@@ -124,3 +124,85 @@ body{
 .dropdown-item:hover {
     background-color: #f1f1f1;
 }
+
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 10px; /* Añade un espacio entre el logo y las opciones */
+    }
+
+    .navbar-nav {
+        display: flex;
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px; /* Añade un espacio entre las opciones y el botón */
+    }
+
+    .navbar-nav li {
+        
+        margin: 0.005rem 0; /* Ajusta el espaciado entre las opciones */
+    }
+
+    .dropdown {
+        position: relative;
+        width: 20%;
+        margin-top: 5px; /* Añade un espacio entre el botón y el menú desplegable */
+        align-items: center;
+        text-align: center;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px; /* Añade un espacio entre el botón y el menú desplegable */
+    }
+
+    .button img {
+        width: 30px; /* Reduce el tamaño del icono del usuario */
+        margin-right: 5px; /* Añade un espacio entre el icono y el texto */
+        text-align: center;
+    }
+
+    .button p {
+        margin: 0;
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .buttonh {
+        position: absolute;
+        list-style: none;
+        padding: 5px;
+        display: none;
+        text-align: center;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        top: 100%; /* Posiciona el menú debajo del botón */
+        left: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .button:hover .buttonh {
+        display: block;
+    }
+
+    .dropdown-item {
+        color: black;
+        padding: 5px 5px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1;
+    }
+}

@@ -205,3 +205,52 @@ body{
     font-size: 50px;
     font-weight: 900;
 }
+
+/* Media query para dispositivos con ancho máximo de 768px (tamaño de pantalla de tabletas y teléfonos en horizontal) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Reducir el ancho del contenedor */
+        padding: 20px; /* Agregar un poco de espacio interno al contenedor */
+        border-radius: 20px; /* Redondear las esquinas del contenedor */
+    }
+
+    .titulo h1 {
+        font-size: 40px; /* Reducir el tamaño del título */
+    }
+
+    .toggle-panel {
+        padding: 0 15px; /* Reducir el espacio interno del panel de alternancia */
+    }
+
+    .toggle-left, .toggle-right {
+        padding: 10px; /* Agregar espacio interno a los paneles izquierdo y derecho */
+    }
+
+    .toggle-container {
+        border-radius: 0; /* Quitar el redondeo de la esquina en el contenedor de alternancia */
+    }
+}
+
+/* Media query para dispositivos con ancho máximo de 576px (tamaño de pantalla de teléfonos en vertical) */
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 95%; /* Reducir aún más el ancho del contenedor */
+        padding: 15px; /* Reducir el espacio interno del contenedor */
+    }
+
+    .titulo h1 {
+        font-size: 30px; /* Reducir aún más el tamaño del título */
+    }
+
+    .toggle-panel {
+        padding: 0 10px; /* Reducir el espacio interno del panel de alternancia */
+    }
+
+    .toggle-left, .toggle-right {
+        padding: 5px; /* Reducir el espacio interno de los paneles izquierdo y derecho */
+    }
+
+    .toggle-container {
+        border-radius: 0; /* Quitar el redondeo de la esquina en el contenedor de alternancia */
+    }
+}

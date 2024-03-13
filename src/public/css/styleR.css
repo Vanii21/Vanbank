@@ -166,3 +166,120 @@ body{
     font-size: 50px;
     font-weight: 900;
 }
+
+/* Media query para pantallas de hasta 768px (tablets y teléfonos en vertical) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .toggle-right {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .toggle-panel {
+        width: 100%;
+    }
+
+    .toggle-panel.toggle-right {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 30px;
+        text-align: center;
+        top: 0;
+        transform: translateX(0);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .titulo img {
+        width: 30%;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    /* Ajustes para el formulario */
+    .container form {
+        padding: 10px;
+    }
+
+    .container input,
+    .container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container button {
+        padding: 8px;
+    }
+}
+
+/* Media query para pantallas de hasta 480px (teléfonos en vertical) */
+@media only screen and (max-width: 480px) {
+    /* Ajustes generales */
+    body {
+        font-size: 5px;
+    }
+
+    /* Contenedor principal */
+    .container {
+        border-radius: 20px;
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Titulo */
+    .titulo {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    /* Formulario */
+    .container form {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container input,
+    .container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container button {
+        padding: 8px;
+    }
+
+    /* Toggle */
+    .toggle-container,
+    .toggle {
+        width: 100%;
+    }
+
+    .toggle-panel.toggle-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Logo */
+    .titulo img {
+        width: 15%;
+    }
+}

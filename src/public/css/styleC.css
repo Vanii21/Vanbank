@@ -80,3 +80,43 @@ body{
     width: 15%;
     padding-bottom: 50px;
 }
+
+/* Estilos para tablets */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(33.3333% - 30px); /* Reducir el ancho de las tarjetas para tablets */
+        margin: 15px 15px 15px 15px;
+    }
+}
+
+/* Estilos para teléfonos en vertical */
+@media only screen and (max-width: 576px) {
+    .card {
+        width: calc(100% - 30px); /* Tarjetas ocupan todo el ancho de la pantalla */
+        margin: 15px 15px 15px 15px;
+    }
+
+    .icon {
+        margin: 30px 0; /* Reducir el margen del icono */
+        svg {
+            width: 80px; /* Reducir el tamaño del icono */
+            height: 80px;
+        }
+    }
+
+    .features li {
+        font-size: 14px; /* Reducir el tamaño de la fuente de las características */
+    }
+
+    .btn {
+        padding: 8px 5px; /* Reducir el padding del botón */
+    }
+
+    .title {
+        font-size: 25px; /* Reducir el tamaño del título */
+    }
+
+    .info img{
+        width: 10%; /* Reducir el tamaño de la imagen */
+    }
+}
