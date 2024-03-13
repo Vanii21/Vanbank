@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/styleT.css">
 </head>
 <body>
-    <% if (rowsOrigen.length === 1) { %>
+    <% if (rowsOrigen.length === 1 && rowsDestino.length === 1) { %>
         <div class="container">
             <h2>TRANSFERENCIAS VANBANK</h2>
             <form action="/transferir/<%= rowsOrigen[0][1] %>/<%= rowsOrigen[0][0] %>" method="post">

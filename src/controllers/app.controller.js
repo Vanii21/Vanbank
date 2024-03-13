@@ -75,7 +75,7 @@ controller.transferencia = async (req, res) => {
     const { id } = req.params
     const pool = await connectiondb();
     const result = await pool.execute('BEGIN ORIGENC(:txtId, :origen); END;', {txtId: id, origen: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
-    const result2 = await pool.execute('BEGIN DESTINOC(:destino); END;', {destino: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
+    const result2 = await pool.execute('BEGIN DESTINOC(:txtId, :destino); END;', {txtId: id, destino: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
     const rowsOrigen = await result.outBinds.origen.getRows();
     const rowsDestino = await result2.outBinds.destino.getRows();
     res.render('transferencia', {rowsOrigen, rowsDestino});
@@ -84,11 +84,11 @@ controller.transferencia = async (req, res) => {
 //Realizar transferencia
 controller.transferir = async (req, res) => {
     const { monto, cuenta_destino, cuenta_origen, descripcion } = req.body
-    const { dpi, id } = req.params
+    const { dpi, id } = req.params;
     const pool = await connectiondb();
     await pool.execute('BEGIN TRANSACCION(:MONTO, :CUENTA_DEST, :CUENTA_ORIG, :DESCRIPCION, :CLIENTE_DPI); END;', {MONTO: monto, CUENTA_DEST: cuenta_destino, CUENTA_ORIG: cuenta_origen, DESCRIPCION: descripcion, CLIENTE_DPI: dpi});
     const result = await pool.execute('BEGIN ORIGENC(:txtId, :origen); END;', {txtId: id, origen: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
-    const result2 = await pool.execute('BEGIN DESTINOC(:destino); END;', {destino: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
+    const result2 = await pool.execute('BEGIN DESTINOC(:txtId, :destino); END;', {txtId: id, destino: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT }});
     const rowsOrigen = await result.outBinds.origen.getRows();
     const rowsDestino = await result2.outBinds.destino.getRows();
     res.render('transferencia', {rowsOrigen, rowsDestino});
